@@ -1,0 +1,42 @@
+<div class='modal show-modal'>
+    <div class='modal-content'>
+        <form id="popup-form" action='index.php' method='get'>
+            <h2 class='text'>Modifier un client</h2>
+            <input type='hidden' name='table' value='Client'>
+            <input type='hidden' name='num_client' value='{{num_client}}'>
+            <input type='hidden' name='action' value='update'>
+            <div>
+                <label class='text' for='nom'>Nom</label>
+                <input type='text' name='nom' id='nom' value='{{nom}}' required>
+            </div>
+            <div>
+                <label class='text' for='raison_sociale'>Raison sociale</label>
+                <input type='text' name='raison_sociale' id='raison_sociale' value='{{raison_sociale}}' required>
+            </div>
+            <div>
+                <label class='text' for='adresse'>Adresse</label>
+                <input type='text' name='adresse' id='adresse' required>
+            </div>
+            <div>
+                <label class='text' for='ville'>Ville</label>
+                <input type='text' name='ville' id='ville' value='{{ville}}' required>
+            </div>
+            <div>
+                <label class='text' for='pays'>Pays</label>
+                <input type='text' name='pays' id='pays' value='{{pays}}' required>
+            </div>
+            <div>
+                <label class='text' for='telephone'>Telephone</label>
+                <input type='text' name='telephone' id='telephone' value='{{telephone}}' required>
+            </div>
+        </form>
+        <div class="actions">
+            <button type='submit' class='button confirm' name="confirmed" value="1" form="popup-form">
+                <span class='text'>Confirmer</span>
+            </button>
+            <button type='button' class='button cancel close-button' name="confirmed" value="0" form="popup-form">
+                <span class='text'>Annuler</span>
+            </button>
+        </div>
+    </div>
+</div>

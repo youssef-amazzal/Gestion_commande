@@ -1,0 +1,29 @@
+<div class='modal show-modal'>
+    <div class='modal-content'>
+        <form id="popup-form" action='index.php' method='get'>
+            <h2 class='text'>Ajouter un produit</h2>
+            <input type='hidden' name='table' value='Product'>
+            <input type='hidden' name='action' value='add'>
+            <div>
+                <label class='text' for='nom'>Nom</label>
+                <input type='text' name='nom' id='nom' required>
+            </div>
+            <div>
+                <label class='text' for='prix_unitaire'>Prix unitaire</label>
+                <input type='text' name='prix_unitaire' id='prix_unitaire' required>
+            </div>
+            <div>
+                <label class='text' for='qte_stockee'>Quantité stockée</label>
+                <input type='text' name='qte_stockee' id='qte_stockee' required>
+            </div>
+        </form>
+        <div class="actions">
+            <button type='submit' class='button confirm' name="confirmed" value="1" form="popup-form">
+                <span class='text'>Confirmer</span>
+            </button>
+            <button type='button' class='button cancel close-button' name="confirmed" value="0" form="popup-form">
+                <span class='text'>Annuler</span>
+            </button>
+        </div>
+    </div>
+</div>

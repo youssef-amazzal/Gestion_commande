@@ -1,0 +1,19 @@
+<div class='modal show-modal'>
+    <div class='modal-content'>
+        <div class="table-data">
+            <div class="table">
+                <div><span class="close-button">&times;</span></div>
+                <div class="head">
+                    <h3 class="text">Commandes</h3>
+                    <form action="index.php" method="get">
+                        <div class="form-input">
+                            <input name="table" type="hidden" value="Client">
+                            <input type='hidden' name='action' value='view'>
+                        </div>
+                    </form>
+                </div>
+                {{table_rows}}
+            </div>
+        </div>
+    </div>
+</div>

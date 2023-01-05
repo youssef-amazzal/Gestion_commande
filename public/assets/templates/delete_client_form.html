@@ -1,0 +1,19 @@
+<div class='modal show-modal'>
+    <div class='modal-content'>
+        <form id="popup-form" action="index.php" method='get'>
+            <h2 class='text'>Supprimer un client</h2>
+            <input type='hidden' name='table' value='Client'>
+            <input type='hidden' name='num_client' value='{{num_client}}}'>
+            <input type='hidden' name='action' value='delete'>
+            <p class='text'>Voulez-vous vraiment supprimer le client {{nom}} ?</p>
+        </form>
+        <div class="actions">
+            <button type='submit' class='button confirm' name="confirmed" value="1" form="popup-form">
+                <span class='text'>Confirmer</span>
+            </button>
+            <button type='button' class='button cancel close-button' name="confirmed" value="0" form="popup-form">
+                <span class='text'>Annuler</span>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,83 @@
+.modal {
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal .modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    width: 24rem;
+    border-radius: 1rem;
+    overflow: clip;
+}
+
+.modal .modal-content form {
+    padding:20px;
+}
+
+.modal .close-button {
+    float: right;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.modal .close-button:hover,
+.modal .close-button:focus {
+    color: black;
+    cursor: pointer;
+}
+
+.show-modal {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+
+.modal form input[type="text"] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.modal .button {
+    background-color: #4caf50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+
+    display: inline-block;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.modal .button.cancel {
+    background-color: #c0c0c0;
+    color: #777777;
+}
+
+.modal .actions {
+    display: flex;
+}
+
+.modal .actions button {
+    flex-grow:1;
+}

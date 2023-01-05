@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!--flags-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css"/>
+    <!-- My CSS -->
+    <link rel="stylesheet" href="/public/assets/css/style.css">
+
+    <title>Gestion de Commande</title>
+</head>
+<body>
+
+
+<!-- SIDEBAR -->
+<section id="sidebar">
+    <a href="#" class="brand">
+        <i class='bx bxs-doughnut-chart'></i>
+        <span class="text">Dashboard</span>
+    </a>
+    <ul class="side-menu top">
+
+        <li class="{{Client_activation}}">
+            <a href="index.php?table=Client">
+                <i class='bx bxs-user-detail' ></i>
+                <span class="text">Clients</span>
+            </a>
+        </li>
+
+        <li class="{{Product_activation}}">
+            <a href="index.php?table=Product">
+                <i class='bx bxs-shopping-bag-alt' ></i>
+                <span class="text">Produits</span>
+            </a>
+        </li>
+
+    </ul>
+
+</section>
+<!-- SIDEBAR -->
+
+
+
+<!-- CONTENT -->
+<section id="content">
+    <!-- NAVBAR -->
+    <nav>
+        <i class='bx bx-menu bx-sm' ></i>
+
+        <input type="checkbox" id="switch-mode" hidden>
+        <label for="switch-mode" class="switch-mode"></label>
+
+        <a href="#" class="profile">
+            <img src="/public/assets/img/pfp.JPG">
+        </a>
+    </nav>
+    <!-- NAVBAR -->
+
+    <!-- MAIN -->
+    <main>
+        <div class="head-title">
+            <div class="left">
+                <h1>Gestion de {{table_name}}</h1>
+            </div>
+
+        </div>
+
+        <div class="table-data">
+            <div class="table">
+                <div class="head">
+                    <h3>{{table_name}}</h3>
+                    <form action="{{form_action}}" method="{{form_method}}">
+                        <div class="form-input">
+                            <input name="table" type="hidden" value="{{table_query}}">
+                            <input name="search" type="search" placeholder="Search..." value="{{search_query}}">
+                            <button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
+                        </div>
+                    </form>
+                    <form action="{{form_action}}" method="{{form_method}}">
+                        <input name="table" type="hidden" value="{{table_query}}">
+                        <input name="action" type="hidden" value="add">
+                        <button type='submit' class='button add trigger'>
+                            <i class='bx bxs-user-plus bx-sm'></i>
+                            <span class="text">Ajouter</span>
+                        </button>
+                    </form>
+                </div>
+
+                {{table_rows}}
+            </div>
+        </div>
+    </main>
+    <!-- MAIN -->
+
+</section>
+<!-- CONTENT -->
+{{add_form}}
+{{edit_form}}
+{{delete_form}}
+{{view_commandes_window}}
+
+<script src="/public/assets/js/script.js"></script>
+</body>
+</html>
