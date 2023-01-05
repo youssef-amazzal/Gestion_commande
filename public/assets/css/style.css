@@ -361,7 +361,6 @@ a:hover {
 .modal-content .table-data {
     display: flex;
     flex-wrap: wrap;
-    grid-gap: 24px;
     margin-top: 24px;
     width: 100%;
     overflow-x: auto;
@@ -371,7 +370,6 @@ a:hover {
 
 #content main .table-data > div,
 .modal-content .table-data > div {
-    border-radius: 20px;
     background: var(--light);
     padding: 24px;
     overflow-x: auto;
@@ -382,16 +380,32 @@ a:hover {
     width: max-content;
     flex-grow: 1;
     flex-basis: 500px;
+    border-radius: 0 0 20px 20px;
+
 }
 
 #content main .table-data .head,
 .modal-content .table-data .head {
     display: flex;
     align-items: center;
+    justify-content:  space-between;
     grid-gap: 16px;
-    margin-bottom: 40px;
     width: 100%;
+    border-radius: 20px 20px 0 0;
 }
+
+#content main .table-data .head > * {
+    margin: auto;
+    flex-grow: 1;
+}
+
+#content main .table-data .head > *:nth-child(2) {
+    flex-grow: 4;
+}
+
+
+
+
 #content main .table-data .head h3,
 .modal-content .table-data .head h3 {
     margin-right: auto;
@@ -405,8 +419,6 @@ a:hover {
 
 #content .table-data form,
 .modal-content .table-data form {
-    max-width: 400px;
-    width: 100%;
     margin-right: auto;
 }
 #content .table-data form .form-input,
@@ -450,21 +462,28 @@ a:hover {
 #content main .table-data .table table,
 .modal-content .table-data .table table {
     width: 100%;
+    overflow-x: scroll;
     border-collapse: collapse;
 }
+
 #content main .table-data .table table th,
 .modal-content .table-data .table table th {
     padding: 16px;
     font-size: 14px;
     text-align: left;
     border-bottom: 1px solid var(--grey);
+    white-space: normal;
+    min-width: min-content;
+
+
 }
 #content main .table-data .table table td,
 .modal-content .table-data .table table td {
     padding: 16px;
     font-size: 13px;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    white-space: normal;
+    min-width: min-content;
+
 }
 
 #content main .table-data .table table tr td:first-child,
@@ -481,20 +500,15 @@ a:hover {
     object-fit: cover;
 }
 
-#content main .table-data .table table td.country,
-.modal-content .table-data .table table td.country {
-    display: flex;
-    align-items: center;
-    grid-gap: 12px;
-    flex-basis: min-content;
-}
-
 #content main .table-data .table table td.actions,
 .modal-content .table-data .table table td.actions {
     display: flex;
     align-items: center;
     grid-gap: 12px;
-    flex-basis: min-content;
+}
+
+#content main .table-data .table table td.actions > * {
+    flex: 1 1 50px;
 }
 
 #content main .table-data .table table tbody tr:hover,
