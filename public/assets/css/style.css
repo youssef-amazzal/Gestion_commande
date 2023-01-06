@@ -515,22 +515,6 @@ a:hover {
 .modal-content .table-data .table table tbody tr:hover {
     background: var(--grey);
 }
-/*#content main .table-data .table table tr td .status {*/
-/*    font-size: 10px;*/
-/*    padding: 6px 16px;*/
-/*    color: var(--light);*/
-/*    border-radius: 20px;*/
-/*    font-weight: 700;*/
-/*}*/
-/*#content main .table-data .table table tr td .status.completed {*/
-/*    background: var(--blue);*/
-/*}*/
-/*#content main .table-data .table table tr td .status.process {*/
-/*    background: var(--yellow);*/
-/*}*/
-/*#content main .table-data .table table tr td .status.pending {*/
-/*    background: var(--orange);*/
-/*}*/
 
 
 #content .button {
